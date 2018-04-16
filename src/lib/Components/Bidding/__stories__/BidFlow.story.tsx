@@ -2,6 +2,7 @@ import { storiesOf } from "@storybook/react-native"
 import React from "react"
 
 import BidFlow from "../Screens/BidFlow"
+import { BidResult } from "../Screens/BidResult"
 import { SelectMaxBid } from "../Screens/SelectMaxBid"
 
 storiesOf("Bidding")
@@ -10,4 +11,7 @@ storiesOf("Bidding")
   })
   .add("Select Max Bid", () => {
     return <SelectMaxBid saleArtworkID="5aada729139b216c0bf18103" />
+  })
+  .add("Bidding Result (winning)", () => {
+    return <BidResult winning />
   })
