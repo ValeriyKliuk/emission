@@ -1,7 +1,8 @@
 import React from "react"
-import styled from "styled-components/native"
 
 import { Button } from "../Components/Button"
+import { Container } from "../Components/Container"
+import { Margins } from "../Components/Margins"
 import { MaxBidPicker } from "../Components/MaxBidPicker"
 import { Title } from "../Components/Title"
 
@@ -37,7 +38,7 @@ export class SelectMaxBid extends React.Component<SelectMaxBidProps> {
   render() {
     return (
       <Container>
-        <Title>Your max bid</Title>
+        <Title style={Margins.m1}>Your max bid</Title>
 
         <MaxBidPicker selectedValue={4500000} bids={Bids} />
 
@@ -46,10 +47,3 @@ export class SelectMaxBid extends React.Component<SelectMaxBidProps> {
     )
   }
 }
-
-const Container = styled.View`
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 20px;
-`
